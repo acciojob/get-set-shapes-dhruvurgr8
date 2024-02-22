@@ -1,35 +1,42 @@
-//complete this code
 class Rectangle {
-	constructor(width,height){
-		this.width = width;
-		this.height = height;
-	}
-	set width(width){
-		this.width = width;
-	}
-	set height(height){
-		this.height = height;
-	}
-	get width(){
-		return this.width
-	}
-	get height(){
-		return this.height
-	}
-	getArea(){
-		const res = (this.height*this.width);
-		return res;
-	}
+    constructor(width, height) {
+        this._width = width;
+        this._height = height;
+    }
+
+    set width(width) {
+        this._width = width;
+    }
+
+    set height(height) {
+        this._height = height;
+    }
+
+    get width() {
+        return this._width;
+    }
+
+    get height() {
+        return this._height;
+    }
+
+    getArea() {
+        return this._height * this._width;
+    }
 }
 
 class Square extends Rectangle {
-	constructor(side){
-		super(height,width);
-	}
-	getPerimeter(){
-		const res = this.side*4;
-		return res;
-	}
+    constructor(side) {
+       
+        super(side, side);
+        this.side = side; 
+    }
+
+    
+
+    getPerimeter() {
+        return this.side * 4;
+    }
 }
 
 // Do not change the code below this line
